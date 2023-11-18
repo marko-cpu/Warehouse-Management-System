@@ -1,0 +1,652 @@
+{
+	"info": {
+		"_postman_id": "8612efd0-6715-491d-a1c1-be43b305a97e",
+		"name": "ProjectPA_HW1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25829954"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create_customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"customerName\":\"Zeljko\",\n    \"contactPerson\":\"zeljko@gmail.com\", \n    \"address\":\"Ustanicka32\",\n    \"city\":\"Kragujevac\",\n    \"postCode\":\"231632\",\n    \"country\":\"Srbija\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/customer/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"customer",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\n   \n    \"contactPerson\":\"zeljko@gmail.com\",\n    \"address\":\"Zrenjaniska 45\",\n    \"city\":\"Zrenjanin\",\n    \"postCode\":\"213555\",\n    \"country\":\"Srbija\",\n    \"customerName\":\"Zeljko\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "create_employee",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//pm.environment.set(\"birthDate\", new Date(\"2000-10-01\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"ognjen\",\n    \"lastName\":\"Obradovic\",\n    \"firstName\":\"Ognjen\",\n    \"birthDate\": \"2000-10-11\"\n    //\"birthDate\": {{birthDate}}\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/employee/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"employee",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\":\"Obradovic\",\n    \"firstName\":\"Ognjen\",\n    \"birthDate\":\"1988-10-11\",\n    \"username\":\"ognjen\"\n  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "create_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\n    \"productName\":\"mis\",\n    \"supplierId\": 1,\n    \"productCategory\":\"Tech\",\n    \"pricePerUnit\": 5000\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\n    \"productName\":\"Chair\",\n  //  \"supplierId\": 2,\n    \"productCategory\":\"Furniture\",\n    \"pricePerUnit\": 800,\n    \"productId\":\"3\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/product/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"product",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shipper",
+			"item": [
+				{
+					"name": "create_shipper",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"shipperName\":\"LogisticDao\",\n    \"phone\":\"0696546423\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/shipper",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"shipper"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_shipper",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/shipper/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"shipper",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_shipper",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shipperName\":\"Global Logistic\",\n    \"phone\":\"1112222333\",\n    \"shipperId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/shipper",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"shipper"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "create_supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"supplierName\":\"FORMAIDEALE\",\n    \"contactPerson\":\"FORMA@gmail.com\", \n    \"address\":\"Ustanicka32\",\n    \"city\":\"Beograd\",\n    \"postCode\":\"257542\",\n    \"country\":\"Srbija\",\n    \"phone\":\"06595656\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/supplier/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"supplier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_supplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n{\n\n    \"supplierName\":\"FORMAIDEALE\",\n    \"contactPerson\":\"FORMA@gmail.com\", \n    \"address\":\"Beogradska 24\",\n    \"city\":\"Beograd\",\n    \"postCode\":\"257542\",\n    \"country\":\"Srbija\",\n    \"phone\":\"555666777\",\n    \"supplierId\":\"2\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "create_order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n    \"customer\": {\n         \"address\": \"Nikole Pasica 2\",\n    \"city\": \"Kragujevac\",\n    \"contactPerson\": \"jovan@gmail.com\",\n    \"country\": \"Srbija\\r\\n\",\n    \"customerName\": \"Jovan\",\n    \"customer_id\": 4,\n    \"postCode\": \"34000\"\n\n    },\n    \"employee\": {\n           \"birthDate\": \"1998-03-01\",\n    \"employee_id\": 1,\n    \"firstName\": \"Bojan\",\n    \"lastName\": \"Petrovic\"\n    },\n    \"shipper\": {\n         \"phone\": \"065456894\",\n    \"shipperId\": 2,\n    \"shipperName\": \"SwiftCargo\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \n    \"customer\": {\n         \"address\": \"Karadjordjeva 2\",\n    \"city\": \"Krusevac\",\n    \"contactPerson\": \"uros@gmail.com\",\n    \"country\": \"Srbija\",\n    \"customerName\": \"Uros\",\n    \"customer_id\": 5,\n    \"postCode\": \"45555\"\n\n    },\n    \"employee\": {\n           \"birthDate\": \"1998-03-01\",\n    \"employee_id\": 1,\n    \"firstName\": \"Bojan\",\n    \"lastName\": \"Petrovic\"\n    },\n    \"shipper\": {\n         \"phone\": \"065456894\",\n    \"shipperId\": 2,\n    \"shipperName\": \"SwiftCargo\"\n    },\n    \"order_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/order/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"order",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderDetails",
+			"item": [
+				{
+					"name": "create-DetailOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\":{\n         \"customer\": {\n        \"address\": \"Karadjordjeva 2\",\n        \"city\": \"Krusevac\",\n        \"contactPerson\": \"uros@gmail.com\",\n        \"country\": \"Srbija\",\n        \"customerName\": \"Uros\",\n        \"customer_id\": 5,\n        \"postCode\": \"45555\"\n    },\n    \"employee\": {\n        \"birthDate\": \"1998-03-01Z\",\n        \"employee_id\": 1,\n        \"firstName\": \"Bojan\",\n        \"lastName\": \"Petrovic\"\n    },\n    \"orderDate\": \"2023-11-17T13:03:29Z[UTC]\",\n    \"order_id\": 1,\n    \"shipper\": {\n        \"phone\": \"065456894\",\n        \"shipperId\": 2,\n        \"shipperName\": \"SwiftCargo\"\n    }},\n    \"product\": {\n         \"pricePerUnit\": 100,\n    \"productCategory\": \"Furniture\",\n    \"productId\": 7,\n    \"productName\": \"Urban Chair\",\n    \"supplier\": {\n        \"address\": \"Krajiska 4\",\n        \"city\": \"Novi sad\",\n        \"contactPerson\": \"globaltrade@gmail.com\",\n        \"country\": \"Srbija\",\n        \"phone\": \"062135546\",\n        \"postCode\": 23256,\n        \"supplierId\": 4,\n        \"supplierName\": \"GlobalTrade Partners\"\n    }},\n    \"quantity\": 5\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/orderDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"orderDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_orderDetail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"order\": {\n         \"customer\": {\n        \"address\": \"Karadjordjeva 2\",\n        \"city\": \"Krusevac\",\n        \"contactPerson\": \"uros@gmail.com\",\n        \"country\": \"Srbija\",\n        \"customerName\": \"Uros\",\n        \"customer_id\": 5,\n        \"postCode\": \"45555\"\n    },\n    \"employee\": {\n        \"birthDate\": \"1998-03-01\",\n        \"employee_id\": 1,\n        \"firstName\": \"Bojan\",\n        \"lastName\": \"Petrovic\"\n    },\n    \"orderDate\": \"2023-11-17T13:03:29\",\n    \"order_id\": 1,\n    \"shipper\": {\n        \"phone\": \"065456894\",\n        \"shipperId\": 2,\n        \"shipperName\": \"SwiftCargo\"\n    }},\n    \"product\": {\n         \"pricePerUnit\": 500,\n    \"productCategory\": \"Tech\",\n    \"productId\": 4,\n    \"productName\": \"PlayStation 5\",\n    \"supplier\": {\n        \"address\": \"Oslobodjenja 2\",\n        \"city\": \"Kragujevac\",\n        \"contactPerson\": \"direc@gmail.com\",\n        \"country\": \"Srbija\",\n        \"phone\": \"0632542156\",\n        \"postCode\": 34000,\n        \"supplierId\": 1,\n        \"supplierName\": \"DirectSource\"\n    }},\n    \"quantity\": 6,\n    \"orderDetail_id\": 19\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/orderDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"orderDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_orderDetail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/orderDetail/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"orderDetail",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "find_and_find_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/projectPA/rest/orderDetail/findAllOrdersDetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projectPA",
+						"rest",
+						"orderDetail",
+						"findAllOrdersDetail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
