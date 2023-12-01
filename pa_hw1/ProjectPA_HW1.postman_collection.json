@@ -627,12 +627,264 @@
 			]
 		},
 		{
+			"name": "Advance",
+			"item": [
+				{
+					"name": "list-customer-and-order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/customers-and-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"customers-and-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-product-shipperid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/shipper/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"shipper",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-product-supplierid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/supplier/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"supplier",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-sum-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/total-sum-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"total-sum-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-order-for-customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/customerid/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"customerid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-order-for-shipper",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/shipperTotal/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"shipperTotal",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-order-for-suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/supplierTotal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"supplierTotal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "max-value-order-employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/max-value-order-employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"max-value-order-employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top-two-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/top-two-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"top-two-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top-four-customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/top-four-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"top-four-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top-supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/projectPA/rest/advance/top-supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projectPA",
+								"rest",
+								"advance",
+								"top-supplier"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "find_and_find_all",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/projectPA/rest/orderDetail/findAllOrdersDetail",
+					"raw": "http://localhost:8080/projectPA/rest/order/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -641,8 +893,8 @@
 					"path": [
 						"projectPA",
 						"rest",
-						"orderDetail",
-						"findAllOrdersDetail"
+						"order",
+						"1"
 					]
 				}
 			},
